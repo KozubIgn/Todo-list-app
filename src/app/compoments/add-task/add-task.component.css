@@ -1,0 +1,16 @@
+input{
+  border-radius:  1.5em;
+  border: 2em grey none;
+  padding: 0.5em;
+  margin-right: 0.5em;
+}
+button{
+  border: none;
+  padding: 0.5em;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background-color: dodgerblue;
+}

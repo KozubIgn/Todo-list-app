@@ -33,7 +33,6 @@ export class TaskComponent implements OnInit {
 
   onDelete(task) {
     this.deleteTask.emit(task);
-
   }
 
 }

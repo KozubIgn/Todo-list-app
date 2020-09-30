@@ -1,5 +1,6 @@
 <app-add-task (addTask)="addTask($event)"></app-add-task>
 <ul class=" tasks">
+  <span><h3> All Tasks </h3></span>
 <app-task *ngFor="let task of tasks" [task]="task"
           (deleteTask)="deleteTask($event)">
 </app-task>

@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Task} from '../../models/task';
 import {TaskService} from '../../services/task.service';
 
-
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
@@ -16,7 +15,6 @@ export class TasksComponent implements OnInit {
 
   ngOnInit(): void {
     this.getTasks();
-
   }
 
   getTasks(): void {
@@ -34,6 +32,5 @@ export class TasksComponent implements OnInit {
     this.taskService.addTask(task).subscribe(task => {
       this.tasks.push(task);
     });
-
   }
 }

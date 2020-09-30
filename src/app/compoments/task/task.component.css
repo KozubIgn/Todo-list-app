@@ -1,3 +1,28 @@
+div{
+  /*display: flex;*/
+  text-align: center;
+  align-content: center;
+}
 .is-done {
   color: chartreuse;
 }
+p{
+  color: #393939;
+   background: whitesmoke ;
+  border-radius:  1.5em;
+   border: 2em grey none;
+  box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+  padding: 5px 9px;
+ }
+.delete{
+  color: red;
+  background: none;
+  border: none;
+float: right;
+}
+input{
+  float: left;
+  border: grey;
+  border-radius: 80%;
+}
+

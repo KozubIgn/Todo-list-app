@@ -10,7 +10,6 @@ export class AddTaskComponent implements OnInit {
 
   title: string;
 
-
   constructor() {
   }
 
