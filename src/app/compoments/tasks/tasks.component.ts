@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Task} from '../../models/task';
-import {TaskService} from '../../task.service';
+import {TaskService} from '../../services/task.service';
 
 
 @Component({
@@ -28,5 +28,12 @@ export class TasksComponent implements OnInit {
     this.tasks = this.tasks.filter(t => t.id !== task.id);
     // server side
     this.taskService.deleteTaskFromDB(task).subscribe();
+  }
+
+  addTask(task: Task) {
+    this.taskService.addTask(task).subscribe(task => {
+      this.tasks.push(task);
+    });
+
   }
 }
