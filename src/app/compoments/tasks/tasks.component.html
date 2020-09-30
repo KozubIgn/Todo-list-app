@@ -1,4 +1,5 @@
 <ul class="tasks">
-  <app-task *ngFor="let task of tasks" [task] = "task">
-    </app-task>
+  <app-task *ngFor="let task of tasks" [task]="task"
+            (deleteTask)="deleteTask($event)">
+  </app-task>
 </ul>
