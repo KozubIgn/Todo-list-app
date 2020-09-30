@@ -6,7 +6,7 @@ import {Observable} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class TaskService {
+export class TasksService {
   tasksURL = 'http://localhost:3000/tasks';
 
   constructor(private http: HttpClient) {
