@@ -3,12 +3,12 @@
     {
       "id": 1,
       "title": "buy a milk",
-      "status": "in-progress"
+      "done": false
     },
     {
       "id": 2,
       "title": "do the laundry",
-      "status": "done"
+      "done": false
     }
   ]
 }
