@@ -1,28 +1,75 @@
-div{
-  /*display: flex;*/
-  text-align: center;
-  align-content: center;
+body {
+  margin-right: 0;
+  margin-left: 0;
 }
-.is-done {
-  color: chartreuse;
+
+.is-done p{
+  background-color: rgba(47, 255, 0, 0.56);
+
+  color: #f5f5f5;
+  box-shadow: inset 0 0 12px -2px rgba(0, 0, 0, 0.5);
 }
-p{
+
+p {
   color: #393939;
-   background: whitesmoke ;
-  border-radius:  1.5em;
-   border: 2em grey none;
-  box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
-  padding: 5px 9px;
- }
-.delete{
+  background: whitesmoke;
+  border-radius: 1.5em;
+  border: 2em grey none;
+  box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
+  padding: 9px 12px;
+}
+
+.delete {
   color: red;
   background: none;
   border: none;
-float: right;
+  float: right;
 }
-input{
+.is-done .delete {
+  color: #393939;
+}
+
+input {
   float: left;
+  margin-right: 1em;
   border: grey;
   border-radius: 80%;
 }
+
+div {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/*!* On mouse-over, add a grey background color *!*/
+/*.container:hover input ~ .checkmark {*/
+/*  background-color: #ccc;*/
+/*}*/
+
+/*!* When the radio button is checked, add a blue background *!*/
+/*.container input:checked ~ .checkmark {*/
+/*  background-color: #2196F3;*/
+/*}*/
+
+/*!* Create the indicator (the dot/circle - hidden when not checked) *!*/
+/*.checkmark:after {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  display: none;*/
+/*}*/
+
+/*!* Show the indicator (dot/circle) when checked *!*/
+/*.container input:checked ~ .checkmark:after {*/
+/*  display: block;*/
+/*}*/
+
+/*!* Style the indicator (dot/circle) *!*/
+/*.container .checkmark:after {*/
+/*  top: 9px;*/
+/*  left: 9px;*/
+/*  width: 8px;*/
+/*  height: 8px;*/
+/*  border-radius: 50%;*/
+/*  background: white;*/
+/*}*/
 
