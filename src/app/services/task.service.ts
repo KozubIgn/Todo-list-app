@@ -32,4 +32,9 @@ export class TaskService {
   addTask(task: Task): Observable<Task> {
     return this.http.post<Task>(this.tasksUrl, task, this.httpOptions);
   }
+// change in DB
+  editTask(currentTask: Task): Observable<Task> {
+    const currentTaskUrl = `${this.tasksUrl}/${currentTask.id}`;
+    return this.http.put<Task>(currentTaskUrl, currentTask, this.httpOptions);
+  }
 }

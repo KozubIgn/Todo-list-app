@@ -9,7 +9,9 @@ import {TaskService} from '../../services/task.service';
 })
 export class TaskComponent implements OnInit {
   @Input() task: Task;
+  @Input() currentTask: Task;
   @Output() deleteTask: EventEmitter<Task> = new EventEmitter();
+  @Output() editTask: EventEmitter<Task> = new EventEmitter();
 
 
   constructor(private taskService: TaskService) {
@@ -33,6 +35,16 @@ export class TaskComponent implements OnInit {
 
   onDelete(task) {
     this.deleteTask.emit(task);
+  }
+
+  onEdit() {
+    const currentTask = {
+      id: this.task.id,
+      title: this.task.title,
+      done: this.task.done
+    };
+    // this.editTask.emit(currentTask);
+    this.taskService.editTask(currentTask).subscribe();
   }
 
 }

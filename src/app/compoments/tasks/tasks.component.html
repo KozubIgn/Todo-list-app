@@ -10,8 +10,11 @@
     </div>
   </div>
 </div>
+
+
 <div class="task-list">
-<app-task *ngFor="let task of tasks" [task]="task"
-          (deleteTask)="deleteTask($event)">
-</app-task>
+
+  <app-task *ngFor="let task of tasks" [task]="task"
+            (deleteTask)="deleteTask($event)">
+  </app-task>
 </div>
