@@ -1,10 +1,16 @@
-input{
-  border-radius:  1.5em;
+form {
+  padding: 12px;
+}
+
+input {
+  border-radius: 1.5em;
   border: 2em grey none;
   padding: 0.5em;
   margin-right: 0.5em;
+  box-shadow: 2px 1px 7px 0px rgba(190, 190, 190, 0.75);
 }
-button{
+
+button {
   border: none;
   padding: 0.5em;
   color: white;
@@ -12,5 +18,14 @@ button{
   width: 30px;
   height: 30px;
   text-align: center;
-  background-color: dodgerblue;
+  background-color: #12c5e5;
+  /*box-shadow: 2px 1px 7px 0px rgba(190, 190, 190, 0.75);*/
+
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+}
+
+button:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
 }

@@ -17,11 +17,13 @@ export class AddTaskComponent implements OnInit {
   }
 
   addNewTask() {
+
     const task = {
       title: this.title,
       done: false
     };
     this.addTask.emit(task);
+    this.title = '';
   }
 
 }
