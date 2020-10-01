@@ -1,1 +1,36 @@
+#grad {
+  background-image: linear-gradient(to right, #9500ff, #ff00e5);
+}
+
+.header {
+  margin-left: 12px;
+  margin-right: 12px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+span {
+  color: #393939;
+}
+
+.header h2 {
+  font-weight: bold;
+  line-height: 50%;
+}
+
+.title {
+  width: 90%;
+  float: left;
+  color: white;
+  padding: 0.5em;
+}
+.date{
+  /*width: 10%;*/
+  /*float: right;*/
+  padding: 0.5em;
+}
+.task-list{
+  margin: 12px;
+}
 

@@ -1,6 +1,16 @@
-<app-add-task (addTask)="addTask($event)"></app-add-task>
-<ul class=" tasks">
-  <span><h3> All Tasks </h3></span>
+<div id="grad">
+  <app-add-task (addTask)="addTask($event)"></app-add-task>
+  <div class="header">
+    <div class="title">
+      <h2>All</h2>
+      <h2>Tasks</h2>
+    </div>
+    <div class="date">
+      <app-date-pipe></app-date-pipe>
+    </div>
+  </div>
+</div>
+<div class="task-list">
 <app-task *ngFor="let task of tasks" [task]="task"
           (deleteTask)="deleteTask($event)">
 </app-task>
