@@ -28,16 +28,16 @@ export class TaskComponent implements OnInit {
     return classes;
   }
 
-  onSwitch(task) {
+  onSwitch(task): void {
     task.done = !this.task.done;
     this.taskService.switchToCompleted(task).subscribe(task => console.log(task));
   }
 
-  onDelete(task) {
+  onDelete(task): void {
     this.deleteTask.emit(task);
   }
 
-  onEdit() {
+  onEdit(): void {
     const currentTask = {
       id: this.task.id,
       title: this.task.title,
