@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
+import {Component, OnInit, Input, EventEmitter, Output, ViewChild, ElementRef} from '@angular/core';
 import {Task} from '../../models/task';
 import {TaskService} from '../../services/task.service';
 
@@ -7,7 +7,7 @@ import {TaskService} from '../../services/task.service';
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.css']
 })
-export class TaskComponent implements OnInit {
+export class TaskComponent {
   @Input() task: Task;
   @Input() currentTask: Task;
   @Output() deleteTask: EventEmitter<Task> = new EventEmitter();
@@ -15,9 +15,6 @@ export class TaskComponent implements OnInit {
 
 
   constructor(private taskService: TaskService) {
-  }
-
-  ngOnInit(): void {
   }
 
   setClass() {
@@ -38,6 +35,7 @@ export class TaskComponent implements OnInit {
   }
 
   onEdit(): void {
+    console.log(this.task);
     const currentTask = {
       id: this.task.id,
       title: this.task.title,

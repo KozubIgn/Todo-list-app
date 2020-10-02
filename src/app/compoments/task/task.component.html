@@ -3,7 +3,7 @@
     <input (change)="onSwitch(task)" type="checkbox">
     <span class="checkmark"></span>
 
-    <input class="task" (click)= "onEdit()" value="{{task.title}}">
+    <input #title class="task" [(ngModel)]="task.title" (click)= "onEdit()" value="{{task.title}}">
     <button (click)="onDelete(task)" class="delete"><i class="far fa-trash-alt"></i></button>
   </p>
 </div>
